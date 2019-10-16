@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子模型</title>
+    <style>
+        * {
+            /* 初始化 */
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background: #f4f4f4;
+            border: tomato 2px solid;
+            width: 500px;
+            height: 200px;
+            /* 将padding和border都算入宽高中 */
+            box-sizing: border-box;
+            /*  全写    */
+            padding: 20px;
+            /* 简写 上右下左 */
+            padding: 10px 20px 10px 20px;
+            /* 简写 上下 左右 */
+            padding: 10px 20px;
+            /* 单写 */
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 20px;
+
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-1" class="box">
+        <h3>Box one</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae debitis praesentium perferendis
+            quos quisquam mollitia sunt? Eum officia, accusantium sunt quisquam ullam tempora hic dolorum asperiores?
+            Quibusdam, alias nam?</p>
+    </div>
+    <div id="box-2" class="box">
+        <h3>Box two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem recusandae debitis praesentium perferendis
+            quos quisquam mollitia sunt? Eum officia, accusantium sunt quisquam ullam tempora hic dolorum asperiores?
+            Quibusdam, alias nam?</p>
+    </div>
+</body>
+
+</html>
