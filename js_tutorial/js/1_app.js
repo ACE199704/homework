@@ -1,48 +1,43 @@
-//var let const
+//类型转换
+let val;
+let num;
+//Number to string
+val = String(533);
+// val = String(4 + 4);
 
-//定义变量
-// var name = "变量所存储的值";
-// console.log(name);
-// name = "wo";
+//Date to String
+val = String(new Date());
 
-// //初始化var
-// var greeting;
-// //数组和对象 对于const而言 里面的属性或者值是可以修改的
-// const person = {
-//   name: "luo",
-//   age: 22
-// };
-// person.age = 23;
-// person.name = "Ace";
-// console.log(person);
-// const numberb = [1, 2, 3, 4, 5];
-// numberb.push(6);
-// console.log(numberb);
+//Array to String
+val = String([1, 2, 3, 4]);
+//toString()
+val = (555).toString();
+val = true.toString();
+//String to Number
+num = Number('5');
+//Bool to Number
+num = Number(true);
+//null to Number
+num = Number(null);
+//NAN
+num = Number('hello');
+//另一种形式：
+num = parseInt('199');
+num = parseInt('199.10');
+num = parseFloat('199.10');
 
-//数据类型
-/**
- * 1.基本数据类型
- * String(字符串) Number(数值) Bollean(布尔) Null(空) Undefined(未定义) Symbol(符号)
- * 2.引用数据类型
- * Object(对象)
- */
-//String
-const name = "hello";
-console.log(typeof name);
-const age = 45;
-const haskid = true;
-const car = null;
-let test;
-const sym = Symbol();
 
-//引用数据类型
-//数组
-const hobbis = ["movies", "music", 46, true];
-//对象
-const address = {
-  city: "beijing",
-  state: "changping"
-};
-//日期对象
-const today = new Date();
-console.log(today);
+
+//输出
+console.log(val);
+console.log(typeof val);
+//字符串的长度，val.length，number类型的话没有这个函数
+console.log(val.length);
+console.log(num);
+
+console.log(num.toFixed(2));
+
+const val1 = String(5);
+const val2 = 6;
+const sum = val1 + val2;
+console.log(sum);
