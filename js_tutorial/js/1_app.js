@@ -1,48 +1,26 @@
-//var let const
+const name = 'john';
+const age = 31;
+const job = 'Web Developer';
+const city = 'Beijing';
 
-//定义变量
-// var name = "变量所存储的值";
-// console.log(name);
-// name = "wo";
+//没有模版字符串 （es5）
 
-// //初始化var
-// var greeting;
-// //数组和对象 对于const而言 里面的属性或者值是可以修改的
-// const person = {
-//   name: "luo",
-//   age: 22
-// };
-// person.age = 23;
-// person.name = "Ace";
-// console.log(person);
-// const numberb = [1, 2, 3, 4, 5];
-// numberb.push(6);
-// console.log(numberb);
+html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
 
-//数据类型
-/**
- * 1.基本数据类型
- * String(字符串) Number(数值) Bollean(布尔) Null(空) Undefined(未定义) Symbol(符号)
- * 2.引用数据类型
- * Object(对象)
- */
-//String
-const name = "hello";
-console.log(typeof name);
-const age = 45;
-const haskid = true;
-const car = null;
-let test;
-const sym = Symbol();
 
-//引用数据类型
-//数组
-const hobbis = ["movies", "music", 46, true];
-//对象
-const address = {
-  city: "beijing",
-  state: "changping"
-};
-//日期对象
-const today = new Date();
-console.log(today);
+function hello() {
+  return 'hello';
+}
+//模版字符串展示（es6） 键盘1的左边
+html = `
+<ul>
+  <li>1/Name:${name}</li>
+  <li>Age:${age}</li>
+  <li>Job:${job}</li>
+  <li>City:${city}</li>
+  <li>${2+2}</li>
+  <li>${hello()}</li>
+  <li>${age>30?'Over 30':'Under 30'}</li>
+</ul>
+`
+document.body.innerHTML = html;
