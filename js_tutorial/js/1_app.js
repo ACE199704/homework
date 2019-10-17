@@ -1,48 +1,45 @@
-//var let const
+const firstName = 'wliiam';
+const lastName = 'jonn';
+let val;
+const str = "Hello there my name is ";
+const tags = "Hello,there my,name,is ";
+val = firstName + ' ' + lastName;
 
-//定义变量
-// var name = "变量所存储的值";
-// console.log(name);
-// name = "wo";
+//append
+val = 'Herry';
+val += ' Wu';
 
-// //初始化var
-// var greeting;
-// //数组和对象 对于const而言 里面的属性或者值是可以修改的
-// const person = {
-//   name: "luo",
-//   age: 22
-// };
-// person.age = 23;
-// person.name = "Ace";
-// console.log(person);
-// const numberb = [1, 2, 3, 4, 5];
-// numberb.push(6);
-// console.log(numberb);
+//转义
+val = 'That\'s awesome, i can\'t wait';
+val = "That's awesome, i can't wait";
+//length
+val = firstName.length;
+//concat 拼接
+val = firstName.concat(' ', lastName);
+//大小写转化
+val = firstName.toUpperCase();
+val = firstName.toLowerCase();
+//字符串下标
+val = firstName[0];
+// indexof
+val = firstName.indexOf('l');
+val = firstName.lastIndexOf('l');
 
-//数据类型
-/**
- * 1.基本数据类型
- * String(字符串) Number(数值) Bollean(布尔) Null(空) Undefined(未定义) Symbol(符号)
- * 2.引用数据类型
- * Object(对象)
- */
-//String
-const name = "hello";
-console.log(typeof name);
-const age = 45;
-const haskid = true;
-const car = null;
-let test;
-const sym = Symbol();
+//charAt
+val = firstName.charAt('2');
+//获取最后一个字符
+val = firstName.charAt(firstName.length - 1);
 
-//引用数据类型
-//数组
-const hobbis = ["movies", "music", 46, true];
-//对象
-const address = {
-  city: "beijing",
-  state: "changping"
-};
-//日期对象
-const today = new Date();
-console.log(today);
+
+//获取子字符串
+val = firstName.substring(0, 4); //从0开始 有4个  
+//slice
+val = firstName.slice(0, 4);
+val = firstName.slice(-3); //可以为负数，就是从最后拿掉三个
+
+//转数组split
+val = str.split(" ");
+val = tags.split(",");
+
+
+console.log(val);
