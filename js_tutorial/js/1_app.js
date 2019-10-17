@@ -1,53 +1,43 @@
-//数组方法
-
-const numbers = [43, 54, 56, 12, 45, 1, 7];
-const numbers2 = new Array(22, 34, 56, 21, 3, 5);
-const fruit = ['Apple', 'Banana', 'Orange', 'Pear'];
-const mixed = [22, "hello", true, undefined, null, {
-  a: 1,
-  b: 2
-}, new Date()];
+const person = {
+  firstName: 'Ace',
+  lastName: 'Luo',
+  age: 22,
+  email: 'ace199704@icloud.com',
+  hobbies: ['music', 'sports'],
+  adress: {
+    city: 'Beijing',
+    state: 'zhaoyang'
+  },
+  getBirthday: function () {
+    return 2019 - this.age;
+  }
+};
 
 let val;
-// //获取长度
-// val = numbers.length;
-// //检查是不是数组
-// val = Array.isArray(numbers);
-// //获取数组的单个元素
-// val = numbers[3];
 
-// //更改某个元素值
-// numbers[2] = 110;
-
-// //查找元素下标位置
-// val = numbers.indexOf(45);
-// //添加和删除
-// numbers.push(288);
-// numbers.unshift(120); //从前面加
-// numbers.pop(); //从后面删除
-// numbers.shift(); //从前面删除
-// numbers.splice(1, 3); //删除一段 从1开始删 删3个
-// //反转
-// numbers.reverse();
-
-// //数组拼接
-// val = numbers.concat(numbers2);
-
-// //数组排序
-// val = fruit.sort(); //按照Ascii码排序
-// val = numbers.sort();
-
-// //正常排序数组
-
-
-// //正常排序数值
-val = numbers.sort(function (x, y) {
-  return x - y;
-});
-//倒序
-val = numbers.sort(function (x, y) {
-  return y - x;
-})
-
-console.log(numbers);
+val = person;
+//获取单个属性
+val = person.firstName;
+//或者
+val = person['lastName'];
+val = person.email;
+val = person.adress.city;
+val = person.getBirthday();
 console.log(val);
+//数组对象嵌套
+const people = [{
+    name: 'Buckuy',
+    age: 23
+  },
+  {
+    name: 'Henry',
+    age: 30
+  },
+  {
+    name: 'Elyse',
+    age: 20
+  }
+];
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i].name);
+}
