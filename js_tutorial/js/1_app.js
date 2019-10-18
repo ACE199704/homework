@@ -1,81 +1,68 @@
-//if switch
-
-//if 分支语句
-
-//条件： 关系运算符 逻辑运算符 最终结果为布尔值
-//关系运算符： > < >= == <= != === !== [ ===不但判断值 也会判断类型 ]
-//逻辑运算符： &&(AND) ||(OR) !(取反)
-
-let id = "100";
-
-if (id !== 100) {
-  console.log("条件为真");
-} else {
-  console.log("条件为假");
+//for循环
+/** 
+for (let i = 0; i < 10; i++) {
+  console.log(i);
 }
+*/
 
-// let idd = 100;
-//Test 分支条件是否为undefined
-if (typeof idd !== "undefined") {
-  console.log(`ID是${idd}`);
-} else {
-  console.log("没有设置ID");
+//while循环
+/** 
+let i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
 }
+*/
 
-const name = "Steve";
-const age = 14;
-if (age > 0 && age <= 12) {
-  console.log(`${name} is a child`);
-} else if (age >= 13 && age <= 19) {
-  console.log(`${name} is a teenager`);
-} else {
-  console.log(`${name} is an adault`);
+//do while 循环
+/** 
+let i = 0;
+do {
+  console.log(i);
+  i++;
+} while (i < 10);
+*/
+
+//对于数组循环
+/** 
+cars = ["ford", "BWM", "audi", "sansumg"];
+for (let a = 0; a < cars.length; a++) {
+  console.log(cars[a]);
 }
-//三目运算符
+//forEach 语句
+cars.forEach(function(car, index, array) {
+  console.log(car);
+  console.log(index);
+  console.log(array);
+});
+*/
 
-console.log(id === 100 ? "correct" : "Incorrect");
+//map
+const users = [
+  { id: 1, name: "assd" },
+  { id: 2, name: "suhhdu" },
+  { id: 3, name: "sauhau" },
+  { id: 4, name: "ashuhd" },
+  { id: 5, name: "asn" }
+];
 
-//switch
-const color = "yellow";
-switch (color) {
-  case "red":
-    console.log("color is red");
-    break;
-  case "blue":
-    console.log("color is blue");
-    break;
-  case "yellow":
-    console.log("color is yellow");
-    break;
-  default:
-    console.log("color is unkown");
-    break;
+const names = users.map(function(user) {
+  return user.name;
+});
+console.log(names);
+const ids = users.map(function*(user) {
+  return user.id;
+});
+console.log(ids);
+
+//------------important---------------
+//遍历对象
+const people = {
+  firstName: "Jonn",
+  lastName: "Doe",
+  age: 40
+};
+for (let x in people) {
+  console.log(`${x}:${people[x]}`);
 }
-
-let day;
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sun";
-    break;
-  case 1:
-    day = "Mon";
-    break;
-  case 2:
-    day = "Tues";
-    break;
-  case 3:
-    day = "Weds";
-    break;
-  case 4:
-    day = "Thri";
-    break;
-  case 5:
-    day = "Fri";
-    break;
-  case 6:
-    day = "Sat";
-    break;
-  default:
-    break;
-}
-console.log(day);
+//------------important---------------
