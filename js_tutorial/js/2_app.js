@@ -58,4 +58,4 @@ its.forEach(function (lis, index) {
 const lis = document.querySelectorAll('li:nth-child(odd)');
 lis.forEach(function (lis, index) {
   lis.style.background = '#ccc';
-})
+});
