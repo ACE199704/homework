@@ -1,55 +1,56 @@
-//函数定义
+//Windows 的方法 对象 属性
+// window.console.log("Hello");
 
-//无返回值 无参数
-function hello() {
-  console.log("hello");
-}
-//又返回值 无参数
-function greet() {
-  return { a: 1, b: 2 };
-}
-//有参数 无返回值
-function greet1(name = "Mini") {
-  console.log("Hello " + name);
-}
-//有参数 又返回值
-function greet2(name = "Mini") {
-  return "Hello" + name;
-}
-//函数调用
-hello();
-console.log(greet());
-greet1();
-console.log(greet2());
+//alert
+// window.alert("Hello");
 
-//函数表达式
-const squar = function(x) {
-  return x * x;
-};
+// //prompt
+// const input = prompt();
+// alert(input);
 
-console.log(squar(10));
-//------------------important--------------------
-//------------------important--------------------
-//自执行函数
-(function(name) {
-  console.log("自执行函数" + name);
-})("hhhh");
+//confirm
+// if (confirm("Are you sure?")) {
+//   console.log("yes");
+// } else {
+//   console.log("no");
+// }
 
-//属性函数
-const todo = {
-  add: function() {
-    console.log("Add to do...");
-  },
-  edit: function() {
-    console.log("Edit to do...");
-  }
-};
+let val;
 
-todo.delete = function() {
-  console.log("delete to do...");
-};
-todo.add();
-todo.delete();
+//窗口大小
+val = window.outerWidth;
+console.log(val);
 
-//------------------important--------------------
-//------------------important--------------------
+//可视区域大小
+val = window.innerWidth;
+console.log(val);
+
+//滚动大小
+val = window.scrollY;
+console.log(val);
+
+//location
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
+
+//Redirect
+// window.location.href = "http://www.baidu.com";
+//Reload
+// window.location.reload();
+
+// //History
+// window.history.go(-1);
+// val = window.history.length;
+
+//Navigator
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.language;
+
+console.log(val);
