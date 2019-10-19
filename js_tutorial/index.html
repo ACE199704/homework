@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>任务列表</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #container1 {
+      margin: 20px 20px 0px 20px;
+      padding: 10px 20px;
+      border: #c4c4c4 1px solid;
+    }
+
+    #container1 h2 {
+      font-weight: 200;
+      color: #5f5f5f;
+      margin-bottom: 10px;
+    }
+
+    .taskLabel {
+      display: block;
+      font-size: 12px;
+      color: #7f7f7f;
+      margin-bottom: 10px;
+    }
+
+    .task {
+      display: block;
+      border: none;
+      width: 98%;
+      height: 30px;
+      font-size: 16px;
+      border-bottom: 2px #5f5f5f solid;
+      margin-bottom: 20px;
+
+    }
+
+    .addButton {
+      width: 100px;
+      height: 36px;
+      padding: 7px;
+      border-radius: 5px;
+      background: teal;
+      color: white;
+      box-sizing: border-box;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    #container2 {
+      margin: 0px 20px;
+      padding: 10px 20px;
+      border: #c4c4c4 1px solid;
+    }
+
+    #container2 h2 {
+      font-weight: 400;
+    }
+
+    form {
+      margin-top: 10px;
+      padding: 0;
+    }
+
+    .lists {
+      flex: auto;
+      height: 36px;
+      border: 1px #f4f4f4 solid;
+      list-style: none;
+      justify-items: center;
+      align-items: center;
+      padding: 10px 0px 0px 5px;
+
+    }
+
+    .delButton {
+      border: none;
+      color: rgb(245, 180, 100);
+      width: 20px;
+      float: right;
+      font-size: large;
+      margin-right: 10px;
+    }
+
+    .delAll {
+      margin-top: 10px;
+      width: 100px;
+      height: 36px;
+      padding: 7px 10px;
+      background: rgb(245, 180, 100);
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container1">
+    <h2>任务列表</h2>
+    <form action="#">
+      <label for="task" class="taskLabel">新任务</label>
+      <input type="text" name="task" id="task" class="task">
+      <button class="addButton" type="button">添加任务</button>
+    </form>
+  </div>
+  <div id="container2">
+    <h2>任务清单</h2>
+    <form action="">
+      <ul>
+        <li class="lists">
+          <span>任务1</span>
+          <button type="button" class="delButton"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="lists">
+          <span>任务2</span>
+          <button type="button" class="delButton"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="lists">
+          <span>任务3</span>
+          <button type="button" class="delButton"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="lists">
+          <span>任务4</span>
+          <button type="button" class="delButton"><i class="fas fa-times"></i></button>
+        </li>
+        <li class="lists">
+          <span>任务5</span>
+          <button type="button" class="delButton"><i class="fas fa-times"></i></button>
+        </li>
+      </ul>
+    </form>
+    <button class="delAll">清除任务</button>
+  </div>
+  <script src="./js/app.js"></script>
+  <script src="https://kit.fontawesome.com/a472730d77.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
