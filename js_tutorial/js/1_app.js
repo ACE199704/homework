@@ -1,28 +1,29 @@
-// //添加元素
+// //鼠标事件
 
-// //创建元素
-// const li = document.createElement('li');
+// const clearBtn = document.querySelector('.delAll');
+// const card = document.querySelector('#container1');
+// const heading = document.querySelector('#task-title');
+// // //click
+// // clearBtn.addEventListener('click', runEvent);
+// // //double cilck
+// // clearBtn.addEventListener('dblclick', runEvent);
+// // //mousedown
+// // clearBtn.addEventListener('mousedown', runEvent);
+// // //mouseup
+// // clearBtn.addEventListener('mouseup', runEvent);
+// // //mouseenter 鼠标移入
+// // card.addEventListener('mouseenter', runEvent);
+// //mouseover 鼠标移入
+// // card.addEventListener('mouseover', runEvent);
+// //mouseleave mouseout
+// // card.addEventListener('mouseleave', runEvent);
+// // card.addEventListener('mouseout', runEvent);
 
-// //添加类
-// li.className = 'lists';
-// //添加id
-// // li.id =''
-// //添加对应属性
-// li.setAttribute('titel', 'New Item'); //前一个是属性的名字后一个是属性的值
+// //mousemove
+// card.addEventListener('mousemove', runEvent);
 
-// //添加文本节点;
-// li.appendChild(document.createTextNode('任务6'));
-
-// //创建a标签
-// const link = document.createElement('a');
-// link.className = 'delButton';
-// //插入i标签
-// link.innerHTML = '<i class="fas fa-times" aria-hidden="true"></i>';
-
-
-// //将link放入li中
-// li.appendChild(link);
-
-// //将li放入ul中
-// document.querySelector('ul').appendChild(li);
-// // console.log(li);
+// function runEvent(e) {
+//   console.log(`Event type:${e.type}`);
+//   heading.textContent = `MouseX:${e.offsetX},MouseY:${e.offsetY}`;
+//   document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY},${e.offsetY})`;
+// }

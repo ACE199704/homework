@@ -1,54 +1,26 @@
-// //获取节点
+// 事件监听 和 事件对象
 
-// let var1;
-// const list = document.querySelector('ul');
-// const list2 = document.querySelector('li.lists:first-child');
-// // val1 = list;
+// //方法一
+// document.querySelector(".delAll").addEventListener("click", function(e) {
+//   console.log(e);
+//   // e.defaultPrevented();
+// });
 
-// //--------------获取子节点--------------------
-// val1 = list.childNodes; //显示能看到的和不能看到的
-// val1 = list.childNodes[0].nodeName;
-// val1 = list.childNodes[5].nodeType;
-// //节点类型
-// //1 - element
-// //2 - attribute
-// //3 - textnode
-// //8 - comment
-// //9 - document
-// //10 - doctype
-// //获取子元素节点
-// val1 = list.children;
-// val1 = list.children[1];
-// val1 = list.children[1].textContent;
-// list.children[1].textContent = 'Hello';
-// //子元素的子元素
-// val1 = list.children[2].children[0];
-// //获取第一个元素节点
-// val1 = list.firstChild;
-// //获取最后一个元素节点
-// val1 = list.lastChild;
-// val1 = list.lastElementChild;
-// //计算节点个数
-// val1 = list.childElementCount;
+// //方法二
+// document.querySelector(".delAll").addEventListener("click", onClick); //定义一个函数
 
+// function onClick(e) {
+//   let val;
+//   val = e.target;
+//   val = e.target.className;
+//   val = e.target.classList;
 
-
-
-// //------------------------获取父集节点-------------------------
-// val1 = list2;
-// val1 = list2.parentNode;
-// val1 = list2.parentElement;
-// val1 = list2.parentNode.parentNode;
-
-
-
-
-// //------------------------获取兄弟节点--------------------
-// val1 = list2.nextSibling;
-// val1 = list2.nextElementSibling;
-
-// //获取上一个兄弟节点
-// val1 = list2.previousElementSibling;
-// val1 = list2.previousSibling;
-
-// console.log(val1);
+//   // Event type
+//   val = e.type;
+//   //TimeStamp
+//   val = e.timeStamp;
+//   //鼠标坐标点
+//   val = e.clientX;
+//   val = e.clientY;
+//   console.log(val);
+// }
