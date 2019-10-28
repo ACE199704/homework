@@ -1,0 +1,59 @@
+/* 设置全局变量 */
+:root {
+  --main-bg-color: #f4f4f4;
+  --main-txt-color: #333;
+  --header-bg-color: #6767cc;
+  --header-txt-color: #fff;
+  --container-width: 90%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-txt-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+header#main-header {
+  background-color: var(--header-bg-color);
+  color: var(--header-txt-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 20px auto;
+}
+
+/* 局部变量 */
+.box {
+  --box-bg-color: #ddd;
+  --box-border-color: #06c;
+  --box-padding: 0 10px;
+}
+
+.box {
+  background-color: var(--box-bg-color);
+}
+
+.box h1 {
+  color: var(--box-border-color);
+  padding: var(--box-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  /* padding: 5px, 10px; */
+}
+
+.box p {
+  padding: 0 10px;
+  color: var(--color, #333);
+}
