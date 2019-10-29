@@ -1,0 +1,162 @@
+:root {
+  --left-bg-color: rgba(212, 73, 58, 0.735);
+  --left-font-color: rgba(212, 73, 58, 1);
+  --right-bg-color: rgba(46, 44, 43, 0.735);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  overflow: hidden;
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: url("img/pexels-photo-1293120.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.right {
+  overflow: hidden;
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: url("img/pexels-photo-2194062.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.left h1 {
+  /* margin: auto; */
+  white-space: nowrap;
+  position: absolute;
+  /* margin-top: 40%; */
+  top: 20%;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+}
+
+.left::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: var(--left-bg-color);
+}
+
+.right h1 {
+  /* margin: auto; */
+  white-space: nowrap;
+  position: absolute;
+  /* margin-top: 40%; */
+  top: 20%;
+  color: white;
+  left: 55%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+}
+
+.right::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(46, 44, 43, 0.735);
+}
+
+.button {
+  color: white;
+  white-space: nowrap;
+  text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin-top: 60%; */
+  top: 40%;
+  padding: 12px 50px;
+  border: white 2px solid;
+  font-size: 1.2rem;
+}
+
+.leftBtn:hover {
+  background-color: rgba(232, 232, 232, 0.685);
+  color: var(--left-font-color);
+  font-weight: bold;
+  /* border-color: var(--left-font-color); */
+}
+
+.rightBtn:hover {
+  background-color: rgba(232, 232, 232, 0.685);
+  color: var(--right-bg-color);
+  font-weight: bold;
+  /* border-color: var(--left-font-color); */
+}
+
+.hover-lf .left {
+  width: 75%;
+}
+
+.hover-lf .right {
+  width: 25%;
+}
+
+.hover-rt .left {
+  width: 25%;
+}
+
+.hover-rt .right {
+  width: 75%;
+}
+
+.hover-lf .right::before,
+.hover-rt .left::before {
+  z-index: 2;
+}
+
+.left,
+.right,
+.left::before,
+.right::before {
+  transition: all 0.5s ease-in-out;
+  /* transition: 3s all ease-in-out; */
+}
+
+@media (max-width: 800px) {
+  .container h1 {
+    font-size: 2rem;
+    padding: 0;
+    left: 50%;
+  }
+
+  .button {
+    top: 30%;
+    /* width: 10rem; */
+  }
+}
+
+/* @media(max-width:800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+
+    width: 10rem;
+  }
+} */

@@ -1,0 +1,138 @@
+:root {
+  --left-bg-color: rgba(226, 18, 18, 0.598);
+  --right-bg-color: rgba(19, 18, 18, 0.63);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  overflow: hidden;
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: url("img/pexels-photo-1293120.jpeg") center center no-repeat;
+  background-size: cover;
+}
+
+.right {
+  overflow: hidden;
+
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: url("img/pexels-photo-2194062.jpeg") center center no-repeat;
+  background-size: cover;
+
+}
+
+h1 {
+  overflow: hidden;
+
+  color: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  top: 20%;
+  font-size: 4rem;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: white 2px solid;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 40px;
+  white-space: nowrap;
+  /* font-weight: bold; */
+}
+
+.left::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--left-bg-color);
+}
+
+.right::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--right-bg-color);
+}
+
+.left .button:hover {
+  background: rgba(213, 208, 208, 0.447);
+  color: rgb(220, 27, 24);
+  font-weight: bold;
+}
+
+.right .button:hover {
+  background: rgba(213, 208, 208, 0.447);
+  color: rgb(28, 27, 27);
+  font-weight: bold;
+}
+
+.hover-lf .left {
+  width: 75%;
+}
+
+.hover-lf .right {
+  width: 25%;
+}
+
+.hover-rt .left {
+  width: 25%;
+
+}
+
+.hover-rt .right {
+  width: 75%;
+}
+
+.hover-lf .right::before {
+  z-index: 2;
+}
+
+.hover-rt .left::before {
+  z-index: 2;
+}
+
+.left,
+.right,
+.left::before,
+.right::before {
+  transition: ease-in-out 0.5s all;
+}
+
+@media(max-width:800px) {
+  .container h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+
+  .button {
+    top: 40%;
+  }
+}
